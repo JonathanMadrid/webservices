@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.training.ibm.models;
+
+import java.io.Serializable;
+
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * @author JonathanMadrid
+ *
+ */
+public class RequestLogin implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6522517292164791021L;
+	
+	@ApiModelProperty(value = "Usuario" , required = true,dataType = "String",example = "Jonathan")
+	private String user;
+	
+	@ApiModelProperty(value = "Password debe contener una mayuscula inicial y minimo 8 caracteres" , required = true,dataType = "String",example = "Jonathan2019*")
+	private String password;
+
+
+	public String getUser() {
+		return user;
+	}
+
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+
+}
