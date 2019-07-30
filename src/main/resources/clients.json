@@ -1,0 +1,22 @@
+{
+    "clients": [{
+            "nombre": "jonathan",
+            "campagna": "v.digitales",
+            "id": "000",
+            "ip": "111",
+            "userid": "1111",
+            "fecha": "12334",
+            "mensaje": "hola"
+        },
+        {
+            "nombre": "juan",
+            "userid": "1234",
+            "id": "000",
+            "ip": "111",
+            "campagna": "Ventas digitales",
+            "fecha": "12334",
+            "mensaje": "hola"
+        }
+    ]
+
+}
