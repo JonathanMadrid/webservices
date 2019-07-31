@@ -31,12 +31,13 @@ public class ConsultController {
 	private ConsultService consultservice = null;
 	
 	@RequestMapping(
+			
 			method = RequestMethod.GET, 
 			path = "/validateUser", 
 			consumes = "application/json", 
 			produces = "application/json") 
 	@ApiOperation(value = "consult", notes = "Servicio general de consulta de informacion" , response = UserResponse.class)
-	public UserResponse login(@ApiParam(value = "UserId" , required = true) @RequestBody RequestConsult userid){
+	public UserResponse consult(@ApiParam(value = "UserId" , required = true) @RequestBody RequestConsult userid){
 		UserResponse response = new UserResponse();
 		try {
 			response = consultservice.validateUser(userid);
