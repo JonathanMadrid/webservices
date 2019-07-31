@@ -31,6 +31,7 @@ public class ConsultController {
 	private ConsultService consultservice = null;
 	
 	@RequestMapping(
+			
 			method = RequestMethod.GET, 
 			path = "/validateUser", 
 			consumes = "application/json", 

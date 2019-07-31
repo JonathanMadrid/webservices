@@ -47,6 +47,7 @@ public class ConsultService implements Serializable {
 					response.setMessage("UserId invalido");
 				}
 			
+			
 			System.out.println("UserId: " + userid.getUserid());
 			
 			return response;
