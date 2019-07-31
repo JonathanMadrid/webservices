@@ -6,8 +6,10 @@ package com.training.ibm.models;
 import java.io.Serializable;
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class ConsultModel implements Serializable {
 

@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.training.ibm.singleton;
 
 import java.util.HashMap;
@@ -10,8 +7,10 @@ import com.training.ibm.models.UserResponse;
 
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.singleton
  */
 public class ConsultSingleton {
 	

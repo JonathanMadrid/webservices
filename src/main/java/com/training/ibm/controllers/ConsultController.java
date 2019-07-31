@@ -18,8 +18,10 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.controllers
  */
 
 @Api(tags = "Consult Info")

@@ -8,8 +8,10 @@ import java.io.Serializable;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class RequestConsult implements Serializable{
 

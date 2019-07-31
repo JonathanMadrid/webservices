@@ -5,6 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.training.ibm.services.ConsultRepository;
 
+/**
+ * 
+ * @author JonathanMadrid
+ * @since 31/07/2019
+ * @category com.training.ibm
+ */
+
 @SpringBootApplication
 public class IbmApplication {
 

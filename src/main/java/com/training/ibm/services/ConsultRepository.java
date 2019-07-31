@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.training.ibm.services;
 
 import java.io.FileReader;
@@ -18,8 +16,10 @@ import com.training.ibm.singleton.ConsultSingleton;
 
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.services
  */
 public class ConsultRepository implements Serializable{
 

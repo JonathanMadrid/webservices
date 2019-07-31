@@ -4,8 +4,10 @@
 package com.training.ibm.exceptions;
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.exceptions
  */
 public class ConsultException extends Exception {
 

@@ -1,4 +1,4 @@
-/**
+ /**
  * 
  */
 package com.training.ibm.models;
@@ -6,8 +6,10 @@ package com.training.ibm.models;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
+ * 
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class UserResponse extends GenericResponse{
 
@@ -22,7 +24,7 @@ public class UserResponse extends GenericResponse{
 	private String nombre;
 	private String campagna;
 	
-	@ApiModelProperty(value = "OK = el id es correcto ,error interno" , required = true, dataType = "String", example = "12345")
+	@ApiModelProperty(value = "OK = el id es correcto ,ERROR = error interno" , required = true, dataType = "String", example = "12345")
 	private String statusUser;
 	
 	
