@@ -8,8 +8,10 @@ import java.io.Serializable;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
+ * Responsabilidad de la clase crear modelo de datos de la peticion con sus metodos
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class RequestLogin implements Serializable {
 

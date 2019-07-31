@@ -19,8 +19,10 @@ import com.training.ibm.singleton.LoginSingleton;
 
 
 /**
+ * Responsabilidad encuentra el archivo plano y lo lee para verificar la informacion
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.services
  */
 @Service
 public class LoginRepository implements Serializable {

@@ -6,8 +6,10 @@ package com.training.ibm.models;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
+ * Genera el modelo de datos de la respuesta que recibe el usuario
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class UserResponse extends GenericResponse{
 
@@ -23,7 +25,7 @@ public class UserResponse extends GenericResponse{
 	/**status posibles
 	 * 
 	 */
-	@ApiModelProperty(value = "OK = el usario se loguea bien ERROR hub un error interno" , required = true, dataType = "String", example = "Jonathan")
+	@ApiModelProperty(value = "OK = el usario se loguea bien, ERROR = hubo un error interno" , required = true, dataType = "String", example = "Jonathan")
 	private String statusUser;
 
 	public String getUser() {
@@ -49,6 +51,8 @@ public class UserResponse extends GenericResponse{
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 
 
 	public boolean isFind() {

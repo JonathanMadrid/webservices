@@ -1,6 +1,4 @@
-/**
- * 
- */
+
 package com.training.ibm.services;
 
 import java.io.Serializable;
@@ -14,8 +12,10 @@ import com.training.ibm.models.UserResponse;
 import com.training.ibm.singleton.LoginSingleton;
 
 /**
+ * Valida el archivo plano y genera la respuesta que recibe el usuario
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.services
  */
 @Service
 public class LoginService implements Serializable {
@@ -37,7 +37,7 @@ public class LoginService implements Serializable {
 			if (LoginSingleton.getInstance().getUserMap().containsKey(user.getUser())) {
 				UserResponse userMap = LoginSingleton.getInstance().getUserMap().get(user.getUser());
 				if (user.getPassword().equals(userMap.getPassword())) {
-					respuesta = userMap;
+					respuesta = userMap; 
 					respuesta.setStatusUser(StatusUser.ACTIVE.name());
 					respuesta.setMessage("Usuario Encontrado");
 					respuesta.setFind(true);

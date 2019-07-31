@@ -6,8 +6,10 @@ package com.training.ibm.models;
 import java.io.Serializable;
 
 /**
+ * Responsabilidad de la clase generar el modelo de datos con sus metodos set y get
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class LoginModel implements Serializable{
 

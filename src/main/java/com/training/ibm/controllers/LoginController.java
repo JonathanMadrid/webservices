@@ -18,8 +18,10 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 /**
+ * Responsabilidad de la clase exponer el servicio de login
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.controllers
  */
 @Api(tags = "Login")
 @RestController 

@@ -24,52 +24,50 @@ public class IbmApplicationTests {
 			user.setPassword("123");
 			LoginService response = new LoginService();
 			UserResponse loginresponse = response.validateUser(user);
-			assertEquals(loginresponse.getStatus(),"ERROR");
+			assertEquals(loginresponse.isFind(),false);
 		} catch (Exception e) {
 			fail(e.getMessage());
 		}
 	}
-	
-	
+
 	@Test
 	public void validateUserExistTest() throws Exception {
-		RequestLogin user = new RequestLogin();
-		user.setUser("jonathan@gmail.com");
-		user.setPassword("123456");
-		LoginService response = new LoginService();
-		UserResponse loginresponse = response.validateUser(user);
-		assertEquals(loginresponse.getStatus(),"OK");
+		try {
+			RequestLogin user = new RequestLogin();
+			user.setUser("jonathan@gmail.com");
+			user.setPassword("123456");
+			LoginService response = new LoginService();
+			UserResponse loginresponse = response.validateUser(user);
+			assertEquals(loginresponse.isFind(),true);
+		} catch (Exception e) {
+			fail(e.getMessage());
+		}
 	}
-	
-	
-/**	@Test
-	public void validateUserTest() throws Exception {
-		RequestLogin user = new RequestLogin();
-		user.setUser("juan0618");
-		user.setPassword("123");
-		LoginService lo = new LoginService();
-		UserResponse loginresponse = lo.validateUser(user); //new LoginController();
-		System.out.println("Primer Escenario de Prueba");
-		System.out.println(loginresponse.getLastAccess());
-		System.out.println(loginresponse.getName());
-		assertEquals("19/07/2019",loginresponse.getLastAccess());
-	}
-	
-	@Test
-	public void validateUserTestWrong() throws Exception {
-		
-		RequestLogin user = new RequestLogin();
-		
-		user.setUser("dsfgsdg32");
-		user.setPassword("fg3235");
-		
-		LoginService lo = new LoginService();
-		
-		UserResponse loginresponse = lo.validateUser(user); //new LoginController();
-			System.out.println("Segundo Escenario de Prueba");
-			System.out.println(loginresponse.getStatus());
-			assertEquals("Invalid User",loginresponse.getStatus());
-			
-	}**/
+
+	/**
+	 * @Test public void validateUserTest() throws Exception { RequestLogin user =
+	 *       new RequestLogin(); user.setUser("juan0618"); user.setPassword("123");
+	 *       LoginService lo = new LoginService(); UserResponse loginresponse =
+	 *       lo.validateUser(user); //new LoginController();
+	 *       System.out.println("Primer Escenario de Prueba");
+	 *       System.out.println(loginresponse.getLastAccess());
+	 *       System.out.println(loginresponse.getName());
+	 *       assertEquals("19/07/2019",loginresponse.getLastAccess()); }
+	 * 
+	 * @Test public void validateUserTestWrong() throws Exception {
+	 * 
+	 *       RequestLogin user = new RequestLogin();
+	 * 
+	 *       user.setUser("dsfgsdg32"); user.setPassword("fg3235");
+	 * 
+	 *       LoginService lo = new LoginService();
+	 * 
+	 *       UserResponse loginresponse = lo.validateUser(user); //new
+	 *       LoginController(); System.out.println("Segundo Escenario de Prueba");
+	 *       System.out.println(loginresponse.getStatus()); assertEquals("Invalid
+	 *       User",loginresponse.getStatus());
+	 * 
+	 *       }
+	 **/
 
 }

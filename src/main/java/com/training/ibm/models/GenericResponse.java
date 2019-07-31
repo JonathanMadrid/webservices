@@ -6,8 +6,10 @@ package com.training.ibm.models;
 import java.io.Serializable;
 
 /**
+ * Responsabilidad crea un respuesta generica en caso de errores
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.models
  */
 public class GenericResponse implements Serializable {
 
@@ -49,6 +51,8 @@ public class GenericResponse implements Serializable {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	
+	
 
 	/**
 	 * @return the message

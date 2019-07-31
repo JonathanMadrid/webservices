@@ -10,8 +10,10 @@ import com.training.ibm.models.UserResponse;
 
 
 /**
+ * Instancia el mapa para almacenar los valores del archivo plano
  * @author JonathanMadrid
- *
+ * @since 31/07/2019
+ * @category com.training.ibm.singleton
  */
 public class LoginSingleton {
 
