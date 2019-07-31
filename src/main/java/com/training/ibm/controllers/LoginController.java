@@ -35,7 +35,7 @@ public class LoginController {
 			consumes = "application/json", 
 			produces = "application/json") 
 	@ApiOperation(value = "login", notes = "Servicio general de login." , response = UserResponse.class)
-	public UserResponse login(@ApiParam(value = "oBJETO USER CON USER Y PSW" , required = true) @RequestBody RequestLogin user){
+	public UserResponse login(@ApiParam(value = "OBJETO USER CON USER Y PSW" , required = true) @RequestBody RequestLogin user){
 		UserResponse respuesta = new UserResponse();
 		try {
 			respuesta = loginService.validateUser(user);
