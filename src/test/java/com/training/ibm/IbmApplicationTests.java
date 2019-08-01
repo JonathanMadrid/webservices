@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.training.ibm.models.RequestLogin;
 import com.training.ibm.models.UserResponse;
+import com.training.ibm.services.LoginRepository;
 import com.training.ibm.services.LoginService;
 
 @RunWith(SpringRunner.class)
@@ -19,6 +20,7 @@ public class IbmApplicationTests {
 	@Test
 	public void validateUserNoExistTest() throws Exception {
 		try {
+			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
 			user.setUser("pepe@gmail.com");
 			user.setPassword("123");
@@ -29,10 +31,13 @@ public class IbmApplicationTests {
 			fail(e.getMessage());
 		}
 	}
+	
+
 
 	@Test
 	public void validateUserExistTest() throws Exception {
 		try {
+			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
 			user.setUser("jonathan@gmail.com");
 			user.setPassword("123456");
