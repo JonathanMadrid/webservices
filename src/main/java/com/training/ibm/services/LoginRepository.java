@@ -42,7 +42,7 @@ public class LoginRepository implements Serializable {
 
 			for (int i = 0; i < listUsers.size(); i++) {	
 				UserResponse user = new Gson().fromJson(listUsers.get(i).toString(), UserResponse.class);   
-				LoginSingleton.getInstance().getUserMap().put(user.getUser(), user);  		
+				LoginSingleton.getInstance().getUserMap().put(user.getEmail(), user);  		
 			}
 
 		} catch (IOException | ParseException e) {

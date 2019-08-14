@@ -22,7 +22,7 @@ public class IbmApplicationTests {
 		try {
 			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
-			user.setUser("pepe@gmail.com");
+			user.setEmail("pepe@gmail.com");
 			user.setPassword("123");
 			LoginService response = new LoginService();
 			UserResponse loginresponse = response.validateUser(user);
@@ -39,7 +39,7 @@ public class IbmApplicationTests {
 		try {
 			new LoginRepository().loadUsers();
 			RequestLogin user = new RequestLogin();
-			user.setUser("jonathan@gmail.com");
+			user.setEmail("jonathan@gmail.com");
 			user.setPassword("123456");
 			LoginService response = new LoginService();
 			UserResponse loginresponse = response.validateUser(user);

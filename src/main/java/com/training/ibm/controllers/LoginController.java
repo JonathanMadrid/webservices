@@ -4,6 +4,7 @@
 package com.training.ibm.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,6 +26,7 @@ import io.swagger.annotations.ApiParam;
  */
 @Api(tags = "Login")
 @RestController 
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping (path = "/login")
 public class LoginController {
 	
@@ -36,7 +38,7 @@ public class LoginController {
 			path = "/validateUser", 
 			consumes = "application/json", 
 			produces = "application/json") 
-	@ApiOperation(value = "login", notes = "Servicio general de login." , response = UserResponse.class)
+	@ApiOperation(value = "/login", notes = "Servicio general de login." , response = UserResponse.class)
 	public UserResponse login(@ApiParam(value = "OBJETO USER CON USER Y PSW" , required = true) @RequestBody RequestLogin user){
 		UserResponse respuesta = new UserResponse();
 		try {

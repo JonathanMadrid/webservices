@@ -4,6 +4,7 @@
 package com.training.ibm.models;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Responsabilidad de la clase generar el modelo de datos con sus metodos set y get
@@ -18,19 +19,30 @@ public class LoginModel implements Serializable{
 	 */
 	private static final long serialVersionUID = -8771047315409356304L;
 	
-	private String user ;
+	private String email ;
 	private String password;
 	private String name;
-	private String date;
+	private Date date;
+	
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
 	private boolean find;
 	
 	
-	public String getUser() {
-		return user;
+
+
+	public String getEmail() {
+		return email;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getPassword() {
@@ -49,13 +61,7 @@ public class LoginModel implements Serializable{
 		this.name = name;
 	}
 
-	public String getDate() {
-		return date;
-	}
 
-	public void setDate(String date) {
-		this.date = date;
-	}
 
 	public boolean isFind() {
 		return find;

@@ -2,6 +2,7 @@
 package com.training.ibm.services;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import org.springframework.stereotype.Service;
 
@@ -34,12 +35,13 @@ public class LoginService implements Serializable {
 	public UserResponse validateUser(RequestLogin user) throws LoginException {
 		UserResponse respuesta = new UserResponse();
 		try {
-			if (LoginSingleton.getInstance().getUserMap().containsKey(user.getUser())) {
-				UserResponse userMap = LoginSingleton.getInstance().getUserMap().get(user.getUser());
+			if (LoginSingleton.getInstance().getUserMap().containsKey(user.getEmail())) {
+				UserResponse userMap = LoginSingleton.getInstance().getUserMap().get(user.getEmail());
 				if (user.getPassword().equals(userMap.getPassword())) {
 					respuesta = userMap; 
 					respuesta.setStatusUser(StatusUser.ACTIVE.name());
 					respuesta.setMessage("Usuario Encontrado");
+				
 					respuesta.setFind(true);
 				} else {
 					respuesta.setMessage("Usuario y/ password inválidos");
@@ -47,7 +49,7 @@ public class LoginService implements Serializable {
 			} else {
 				respuesta.setMessage("Usuario y/ password inválidos");
 			}
-			System.out.println("User: " + user.getUser());
+			System.out.println("Email: " + user.getEmail());
 			System.out.println("Password: " + user.getPassword());
 			return respuesta;
 		} catch (Exception ex) {

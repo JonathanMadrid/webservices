@@ -35,7 +35,7 @@ public class GenericResponse implements Serializable {
 	 */
 	public GenericResponse() {
 		super();
-		status = "ERROR";
+		status = "OK";
 	}
 
 	/**
